@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "gsrde/test/hello";
+
+service HiService {
+  rpc SayHi (HiRequest) returns (HiReply) {}
+}
+
+message HiRequest {
+  string name = 1;
+  repeated int32 time = 2;
+}
+
+message HiReply {
+  string message = 1;
+
+}
+
+
